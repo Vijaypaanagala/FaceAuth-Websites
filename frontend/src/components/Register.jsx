@@ -28,10 +28,8 @@ const Register = () => {
           faceapi.nets.faceLandmark68Net.loadFromUri("/weights"),
           faceapi.nets.faceRecognitionNet.loadFromUri("/weights"),
         ]);
-        console.log("Face-api.js models loaded successfully");
         setIsLoading(false);
       } catch (error) {
-        console.error("Error loading face-api.js models:", error);
         setIsLoading(false);
       }
     };
@@ -51,7 +49,7 @@ const Register = () => {
         setIsVideoOn(true);
       }
     } catch (err) {
-      console.error("Error accessing webcam:", err);
+      
       alert("Webcam access denied.");
     }
   };
@@ -70,7 +68,7 @@ const Register = () => {
       .withFaceLandmarks()
       .withFaceDescriptors();
 
-    console.log("Detections:", detections);
+    
 
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
@@ -111,13 +109,12 @@ const Register = () => {
       });
 
       if (response.status === 201) {
-        console.log(response.data);
+        
         navigate("/login");
       } else {
         alert(`Registration failed: ${response.data.error}`);
       }
     } catch (error) {
-      console.error('❌ Error during login:', error);
       alert(error.response?.data?.error || 'Login failed');
     }
   };

@@ -27,7 +27,6 @@ function LoginE() {
       window.location.reload();
     } catch (err) {
       setLoading(false); // Stop loading spinner on error
-      console.error("Error details:", err.response?.data?.error || "An error occurred");
       setError(err.response?.data?.error || "An error occurred");
     }
   }

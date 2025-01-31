@@ -16,14 +16,34 @@ app.use(cors({
 }));
 
 app.options('*', cors());
-
-
 app.use(express.json());
 
 
-app.get('/', (req, res) => {
-  res.send("API is running");
-});
+//--------------deployment------------------
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+ // Check for production flag
+
+if (process.env.NODE_ENV=='production') {
+  // Serve static files from the frontend build directory
+  app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+  // Catch-all route to serve the React frontend
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../frontend/dist', 'index.html'));
+  });
+} else {
+  // Development mode
+  app.get('/', (req, res) => {
+    res.send('API is running...');
+  });
+}
+//------------------deployment----------------------------
+
 
 app.use('/user', router);
 

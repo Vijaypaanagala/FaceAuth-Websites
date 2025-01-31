@@ -28,11 +28,11 @@ const Login = () => {
           faceapi.nets.faceLandmark68Net.loadFromUri('/weights'),
           faceapi.nets.faceRecognitionNet.loadFromUri('/weights'),
         ]);
-        console.log('✅ Face-api.js models loaded successfully');
+        
         setIsLoading(false);
         startVideo(); // Start video after models are loaded
       } catch (error) {
-        console.error('❌ Error loading face-api.js models:', error);
+       
         setIsLoading(false);
       }
     };
@@ -51,7 +51,8 @@ const Login = () => {
         }
       }, 500);
     } catch (err) {
-      console.error('❌ Error accessing webcam:', err);
+      
+      alert("Webcam access denied.");
     }
   };
 
@@ -71,7 +72,6 @@ const Login = () => {
         .withFaceLandmarks()
         .withFaceDescriptors();
 
-      console.log('📸 Detections:', detections);
 
       const canvas = canvasRef.current;
       const context = canvas.getContext('2d');
@@ -100,21 +100,20 @@ const Login = () => {
 
   const handleLogin = async (faceDescriptor) => {
     try {
-      console.log('📤 Sending Face Descriptor:', faceDescriptor);
+    
       const response = await axios.post('http://localhost:3000/user/login', { faceDescriptor });
 
       if (response.status === 200) {
-        console.log(response.data.user);
+       
         localStorage.setItem("userEmail",response.data.user.email)
         localStorage.setItem("userName",response.data.user.name)
-        console.log(response.data.user.email)
+      
         navigate('/home');
         window.location.reload();
       } else {
         alert(`❌ Login failed: ${response.data.error}`);
       }
     } catch (error) {
-      console.error('❌ Error during login:', error);
       alert(error.response?.data?.error || 'Login failed');
     }
   };
@@ -136,7 +135,7 @@ const Login = () => {
       ) : (
         <>
         <center> <h2 style={{marginTop:'30px',marginBottom:'20px'}}>Login with Face</h2>
-        
+        <p register-loading-text>Detecting....</p>
         <div style={{ position: 'relative', display: 'inline-block' }}>
           <video ref={videoRef} width="640" height="480" autoPlay muted style={{ border: '2px solid black' }} />
           <canvas

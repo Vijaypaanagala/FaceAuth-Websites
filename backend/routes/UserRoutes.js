@@ -60,7 +60,7 @@ router.post("/login", async (req, res) => {
   try {
     const { email, password, faceDescriptor } = req.body;
 
-    console.log("🔹 Received request:", req.body);
+    
 
     // Case 1: Login using email & password
     if (email && password) {
@@ -87,7 +87,7 @@ router.post("/login", async (req, res) => {
 
     // Case 2: Login using Face Recognition
     else if (faceDescriptor) {
-      console.log("📸 Face descriptor received:", faceDescriptor);
+      
 
       if (!Array.isArray(faceDescriptor) || faceDescriptor.length === 0) {
         return res.status(400).json({ error: "Invalid face descriptor format." });
@@ -139,7 +139,6 @@ router.post("/login", async (req, res) => {
 // Function to compute Euclidean distance
 function euclideanDistance(arr1, arr2) {
   if (arr1.length !== arr2.length) {
-    console.error("⚠️ Face descriptor length mismatch");
     return Infinity;
   }
   return Math.sqrt(arr1.reduce((sum, val, i) => sum + Math.pow(val - arr2[i], 2), 0));
