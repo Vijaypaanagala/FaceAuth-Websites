@@ -1,0 +1,194 @@
+
+/* Register container styling */
+.register-conts{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #eff4f8;
+  font-family: 'Arial', sans-serif;
+}
+.register-container {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff; /* Plain white background */
+  padding: 32px;
+  border-radius: 10px; /* Slight rounded corners */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  text-align: center;
+  margin: 30px;
+  padding-right: 40px; 
+  /* Equal spacing on the right */
+  
+  /* Center content vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Heading styling */
+.register-heading {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #5aa91f;
+  font-weight: bold;
+}
+
+/* Input field styling */
+.register-input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd; /* Light gray border for input fields */
+  border-radius: 8px; /* Rounded input fields */
+  font-size: 1.1rem;
+  background-color: #fff;
+  color: #333;
+  outline: none;
+}
+
+.register-input:focus {
+  border-color: #5aa91f;
+  box-shadow: 0 0 5px rgba(90, 169, 31, 0.5);
+  outline: none;
+}
+
+.register-input::placeholder {
+  color: #aaa; /* Placeholder text color */
+  /* font-style: italic; */
+}
+
+/* Button styling */
+.register-button,
+.register-submit-button {
+  background-color: #4d8b7d; /* New theme color */
+  color: #ffffff;
+  padding: 12px;
+  border-radius: 8px; /* Rounded corners for the buttons */
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+
+.register-button:hover,
+.register-submit-button:hover {
+  background-color: #31665a; /* Darker green on hover */
+}
+
+.register-submit-button {
+  background-color: #5aa91f; /* Green color for submit button */
+  margin-top: 15px;
+}
+
+.register-submit-button:hover {
+  background-color: #488a15; /* Darker green on hover */
+}
+
+.register-button:disabled,
+.register-submit-button:disabled {
+  background-color: #b0b0b0; /* Disabled button with gray color */
+  cursor: not-allowed;
+}
+
+.register-button:disabled:hover,
+.register-submit-button:disabled:hover {
+  background-color: #b0b0b0;
+}
+
+/* Video container styling (optional if using) */
+.register-video-container {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  margin-top: 20px;
+  background-color: #000;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.register-video-container img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px; /* Adjust width */
+  height: 70px; /* Adjust height */
+  object-fit: contain;
+}
+.register-video,
+.register-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Loading text style */
+.register-loading-text {
+  font-size: 1.2rem;
+  margin-top: 50vh;
+  color: #555; /* Lighter gray color for the loading text */
+}
+/* .register-face-label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+  color: #333;
+  text-align: center;
+  margin-top: 5px;
+} */
+#navtosignin {
+  font-size: 15px;
+  color: #6c757d;
+  text-align: center;
+}
+
+#navtosignin a {
+  color: #5aa91f;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#navtosignin a:hover {
+  color: #4b9b16;
+  text-decoration: underline;
+}
+/* Style for face-auth-icon */
+.face-auth-icon {
+  margin-right: 10px; /* Adds space between the icon and the label */
+  vertical-align: middle; /* Aligns the icon with the text */
+}
+
+/* Style for the register-face-label to display inline */
+.register-face-label {
+  display: inline-flex;
+  align-items: center; /* Aligns the text vertically with the icon */
+  /* font-size: 1.1rem; */
+  font-size: 16px;
+  font-weight: bold;
+  color: #343a40;
+  margin-top: 15px;
+  /* margin-bottom: 5px; */
+}
+.face-captured-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #343a40;
+  margin-top: 15px;
+}
+

@@ -1,0 +1,94 @@
+/* UserNavBar.css */
+
+/* Navbar container */
+.navbar {
+  background-color: #fff; /* White background for navbar */
+  border-bottom: 1px solid #ddd; /* Bottom border for separation */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Brand styling */
+.navbar-brand {
+  font-size: 1.8em; /* Larger font size for brand */
+  color: #5aa91f; /* Primary color for brand */
+  font-weight: bold; /* Bold font */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.navbar-brand:hover {
+  color: #4c8e1a; /* Darker shade on hover */
+}
+
+/* Navbar links */
+.nav-link {
+  color: #333; /* Dark gray color for links */
+  font-weight: 500; /* Medium weight for links */
+  transition: color 0.3s; /* Smooth color transition */
+  padding: 15px 20px; /* Add padding to links for equal height */
+  margin: 0; /* Reset margin to avoid spacing issues */
+  display: flex; /* Use flex for centering */
+  align-items: center; /* Center vertically */
+}
+
+.nav-link:hover {
+  color: #5aa91f; /* Primary color on hover */
+}
+
+/* Active link styling */
+.nav-link.active {
+  color: #5aa91f; /* Primary color for active link */
+  font-weight: bold; /* Bold font for active link */
+}
+
+/* User email display */
+.nav-user-email {
+  font-size: 0.9em; /* Smaller font size for user email */
+  color: #666; /* Gray color for user email */
+  padding: 15px 20px; /* Add padding for consistent spacing */
+  margin: 0; /* Reset margin to avoid spacing issues */
+  display: flex; /* Use flex for centering */
+  align-items: center; /* Center vertically */
+}
+
+/* Logout button styling */
+.nav-logout-btn {
+  background: none; /* No background for button */
+  border: none; /* No border */
+  color: #5aa91f; /* Primary color for logout */
+  font-weight: 500; /* Medium weight for logout */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: color 0.3s; /* Smooth color transition */
+  padding: 15px 20px; /* Match padding with nav links */
+  margin: 0; /* Reset margin to avoid spacing issues */
+  display: flex; /* Use flex for centering */
+  align-items: center; /* Center vertically */
+}
+
+.nav-logout-btn:hover {
+  color: #4c8e1a; /* Darker shade on hover */
+}
+
+/* Toggler button */
+.navbar-toggler {
+  border-color: #ddd; /* Border color for toggler */
+}
+
+/* Toggler icon color */
+.navbar-toggler-icon {
+  background-color: #5aa91f; /* Toggler icon color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 0; /* Padding for mobile view */
+  }
+
+  .navbar-brand {
+    font-size: 1.6em; /* Adjust brand font size for mobile */
+  }
+
+  .nav-link {
+    font-size: 0.9em; /* Smaller link font size for mobile */
+  }
+}

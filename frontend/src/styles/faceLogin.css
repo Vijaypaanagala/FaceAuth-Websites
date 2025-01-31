@@ -1,0 +1,10 @@
+/* Face Login Page */
+.face-log-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color:black;
+  font-family: 'Arial', sans-serif;
+}

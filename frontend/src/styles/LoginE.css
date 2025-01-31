@@ -1,0 +1,143 @@
+/* General Styles */
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #eff4f8;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Card Styles */
+.login-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 400px;
+  text-align: center;
+  margin: 0 auto; /* Center the card */
+}
+
+/* Title Styles */
+.login-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #343a40;
+  font-weight: bold;
+}
+
+/* Input Styles */
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+.login-input:focus {
+  border-color: #5aa91f;
+  box-shadow: 0 0 5px rgba(90, 169, 31, 0.5);
+  outline: none;
+}
+
+/* Button Styles */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #5aa91f;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-button:hover {
+  background-color: #4b9b16;
+  transform: translateY(-2px);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+/* Error Message Styles */
+.login-error {
+  color: #dc3545;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+/* Spinner styles inside the login button */
+.login-button .fa-spinner {
+  margin: 0; /* Ensure spinner is centered */
+  color: #ffffff; /* Match button text color */
+}
+/* Face Authentication Box */
+.face-auth-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.face-auth-box:hover {
+  background-color: #e9ecef;
+  border-color: #5aa91f;
+  transform: translateY(-2px);
+}
+
+/* Face Authentication Icon */
+.face-auth-icon {
+  font-size: 24px;
+  color: #5aa91f;
+}
+
+/* Face Authentication Text */
+.face-auth-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #343a40;
+  text-decoration: none;
+}
+
+
+
+
+a {
+  text-decoration: none; /* Remove underline from all links */
+  color: inherit; /* Inherit text color from parent */
+}
+
+/* Sign-up Text */
+#navtosignup {
+  font-size: 15px;
+  color: #6c757d;
+  text-align: center;
+}
+
+#navtosignup a {
+  color: #5aa91f;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#navtosignup a:hover {
+  color: #4b9b16;
+  text-decoration: underline;
+}
+
