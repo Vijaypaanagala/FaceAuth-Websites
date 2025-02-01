@@ -101,7 +101,7 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3000/user/register", {
+      const response = await axios.post("https://faceauth-r2l1.onrender.com/user/register", {
         name,
         email,
         password,

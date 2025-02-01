@@ -17,7 +17,7 @@ function LoginE() {
     try {
       setLoading(true); // Start loading spinner
       const response = await axios.post(
-        "http://localhost:3000/user/login",
+        "https://faceauth-r2l1.onrender.com/user/login",
         payload
       );
       setLoading(false); // Stop loading spinner
