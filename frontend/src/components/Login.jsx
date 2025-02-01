@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import * as faceapi from 'face-api.js';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import '../styles/Login.css'
 const Login = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [faceDetected, setFaceDetected] = useState(false);
@@ -127,29 +127,27 @@ const Login = () => {
   }, []);
 
   return (
-    <div>
-      
+    <div className="login-container">
       {isLoading ? (
-        <center><p className='register-loading-text'>Loading...</p></center>
-        
+        <center><p className='register-loading-texted'>Loading...</p></center>
       ) : (
         <>
-        <center> <h2 style={{marginTop:'30px',marginBottom:'20px'}}>Login with Face</h2>
-        <p register-loading-text>Detecting....</p>
-        <div style={{ position: 'relative', display: 'inline-block' }}>
-          <video ref={videoRef} width="640" height="480" autoPlay muted style={{ border: '2px solid black' }} />
-          <canvas
-            ref={canvasRef}
-            width="640"
-            height="480"
-            style={{ position: 'absolute', top: 0, left: 0 }}
-          />
-        </div>
-        </center>
+          <center>
+            <h2 className="login-titled">Login with Face</h2>
+            <p className="register-loading-texted">Detecting...</p>
+            <div className="video-container">
+              <video ref={videoRef} className="responsive-video" autoPlay muted />
+              <canvas
+                ref={canvasRef}
+                className="canvas-overlay"
+              />
+            </div>
+          </center>
         </>
       )}
     </div>
   );
+  
 };
 
 export default Login;

@@ -1,0 +1,86 @@
+/* Wrapper for login content */
+.login-containered {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 100%;
+}
+
+/* Title styling */
+.login-titled {
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+/* Video container adjustments */
+.video-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 640px;
+}
+
+/* Video styling */
+.responsive-video {
+  width: 100%;
+  height: auto;
+  border: 2px solid black;
+  display: block;
+}
+
+/* Canvas styling */
+.canvas-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.register-loading-texted {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+/* Responsive design adjustments for mobile, tablet, and larger screens */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .video-container {
+    max-width: 90%;
+  }
+
+  .login-titled {
+    font-size: 24px; /* Slightly smaller font size on tablets */
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .video-container {
+    max-width: 100%;
+  }
+
+  .responsive-video, .canvas-overlay {
+    width: 100%;
+    height: auto;
+  }
+
+  .login-titled {
+    font-size: 20px; /* Even smaller font size on mobile */
+  }
+
+  .register-loading-texted {
+    font-size: 14px; /* Smaller text on mobile */
+  }
+}
+
+/* Desktop screens (larger than 768px) */
+@media (min-width: 769px) {
+  .login-titled {
+    font-size: 32px; /* Larger font size for desktop */
+  }
+}
+
