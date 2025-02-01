@@ -28,7 +28,7 @@ const __dirname = path.dirname(__filename);
 
  // Check for production flag
 
-if (process.env.NODE_ENV=='production') {
+if (process.env.NODE_ENV==='production') {
   // Serve static files from the frontend build directory
   app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
@@ -47,9 +47,9 @@ if (process.env.NODE_ENV=='production') {
 
 app.use('/user', router);
 
-const PORT = process.env.port || 3000;
+const PORT = process.env.PORT || 3000;
 
-mongoose.connect(process.env.mongoUrl)
+mongoose.connect(process.env.MONGO_URL)
   .then(() => {
     console.log("Connected successfully to MongoDB");
     app.listen(PORT, () => {
