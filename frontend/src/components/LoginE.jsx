@@ -26,7 +26,7 @@ function LoginE() {
       navigate("/Home");
       window.location.reload();
     } catch (err) {
-      setLoading(false); // Stop loading spinner on error
+      setLoading(false); 
       setError(err.response?.data?.error || "An error occurred");
     }
   }
