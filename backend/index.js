@@ -28,7 +28,7 @@ const __dirname = path.dirname(__filename);
 
  // Check for production flag
 
-if (process.env.NODE_ENV==='production') {
+if (process.argv[2] === 'production') {
   // Serve static files from the frontend build directory
   app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
